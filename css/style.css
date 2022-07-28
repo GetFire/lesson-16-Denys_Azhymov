@@ -1,0 +1,203 @@
+/*
+BEM tips
+
+block name simple-name
+ element name simple-name__element
+ elements can be inside others elements
+
+mixins.  we use them for outer geometry
+    title - block
+    title section__title - mixin
+
+modificators. we use them to modify look
+    title - block
+    title--red - modificator
+
+
+MF
+1401
+1201
+992
+768
+576
+461
+
+*/
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+    url('../fonts/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('../fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.inline {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.body {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background: #F3F3F3;
+}
+
+.container {
+    max-width: 1076px;
+    min-width: 375px;
+    margin: 0 auto;
+}
+
+.title--header {
+    padding-top: 98px;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 345px;
+    height: auto;
+}
+
+.title > h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 57px;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+.title > p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #737373;
+    padding-top: 10px;
+}
+
+.title--practice > h1 {
+    color: #252B42;
+}
+
+.title--practice {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 345px;
+    height: auto;
+}
+
+.sub-header {
+    padding-top: 15px;
+}
+
+.sub-header__list-wrap {
+    padding: 15px 0;
+    margin: 0 15px;
+}
+
+.sub-header__list-item::before {
+    padding-top: 30px;
+    content: url("../img/stats_icon-1.svg");
+}
+
+.item-customers::before {
+    content: url("../img/stats_icon-2.svg");
+}
+
+.item-winning::before {
+    content: url("../img/stats_icon-3.svg");
+}
+
+.item-cases::before {
+    content: url("../img/stats_icon-4.svg");
+}
+
+.sub-header__stat-list {
+    padding-bottom: 103px;
+}
+
+.sub-header__list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #FFFFFF;
+    width: 345px;
+    height: 209px;
+}
+
+.sub-header__list-item > h2 {
+    padding-top: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    color: #252B42;
+}
+
+.sub-header__list-item > p {
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1px;
+    color: #737373;
+    text-transform: uppercase;
+}
+
+.practice {
+    padding-top: 98px;
+}
+
+.practice__list {
+    padding-top: 30px;
+}
+
+.practice__list-wrap {
+    padding-bottom: 50px;
+    margin: 0 15px;
+
+}
+
+.practice__list-item {
+    background: #FFFFFF;
+    width: 345px;
+    height: 277px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+.practice__list-item > h2 {
+    padding-top: 30px;
+    padding-left: 30px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #252B42;
+}
+
+.practice__list-item > p {
+    padding-left: 30px;
+}
