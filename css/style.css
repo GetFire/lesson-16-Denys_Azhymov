@@ -45,11 +45,6 @@ MF
     box-sizing: border-box;
 }
 
-.inline {
-    display: inline-block;
-    vertical-align: top;
-}
-
 .body {
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: 500;
@@ -63,21 +58,18 @@ MF
     margin: 0 auto;
 }
 
+.sub-header {
+    padding-top: 98px;
+}
+
 .title {
     display: flex;
     flex-direction: column;
 }
 
-.title--header {
-    padding-top: 98px;
-    padding-left: 15px;
-    padding-right: 15px;
-    max-width: 345px;
-    height: auto;
-}
-
 .title > h1 {
-    padding: 0 44px;
+    width: 100%;
+    padding: 0 53px;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -87,6 +79,7 @@ MF
 }
 
 .title > p {
+    width: 100%;
     padding: 10px 60px 0 60px;
     font-style: normal;
     font-weight: 500;
@@ -97,24 +90,43 @@ MF
     color: #737373;
 }
 
-.title--practice > h1 {
-    color: #252B42;
+
+.sub-header__stat-list {
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.title--practice {
-    padding-left: 15px;
-    padding-right: 15px;
-    max-width: 345px;
-    height: auto;
-}
-
-.sub-header {
-    padding-top: 15px;
+.sub-header__list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
 }
 
 .sub-header__list-wrap {
-    padding: 15px 0;
-    margin: 0 15px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.sub-header__list-item > h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    color: #252B42;
+}
+
+.sub-header__list-item > p {
+    padding-bottom: 30px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+    color: #737373;
 }
 
 .sub-header__list-item::before {
@@ -134,76 +146,33 @@ MF
     content: url("../img/stats_icon-4.svg");
 }
 
-.sub-header__stat-list {
-    padding-bottom: 103px;
-}
-
-.sub-header__list-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background: #FFFFFF;
-    width: 345px;
-    height: 209px;
-}
-
-.sub-header__list-item > h2 {
-    padding-top: 10px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 57px;
-    letter-spacing: 0.2px;
-    color: #252B42;
-}
-
-.sub-header__list-item > p {
-    padding-top: 10px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: 0.1px;
-    color: #737373;
-    text-transform: uppercase;
-}
-
 .practice {
-    padding-top: 98px;
+    padding-top: 83px;
 }
 
 .practice__list {
-    padding-top: 30px;
+    padding: 50px 15px 0 15px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .practice__list-wrap {
-    padding-bottom: 50px;
-    margin: 0 15px;
-
+    width: 100%;
+    padding: 25px 0;
 }
 
 .practice__list-item {
-    background: #FFFFFF;
-    width: 345px;
-    height: 299px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-
+    background: #FFFFFF;
 }
 
 .practice__list-content {
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-.practice__list-content > p {
-    padding-top: 15px;
+    padding: 30px 30px 30px 30px;
 }
 
 .practice__list-content > h2 {
+    padding-bottom: 15px;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -212,6 +181,63 @@ MF
     color: #252B42;
 }
 
-.practice__list-item > img {
-    padding-top: 30px;
+.practice__list-content > p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #737373;
 }
+
+@media screen and (min-width: 576px) {
+    .sub-header__list-wrap {
+        width: 50%;
+        padding: 0 15px;
+    }
+
+    .practice__list-wrap {
+        width: 50%;
+        padding: 0 15px;
+        margin: 15px 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .title > p {
+        padding-left: 177px;
+        padding-right: 177px;
+    }
+
+    .sub-header {
+        background: linear-gradient(180deg, #FAFAFA 0%, #E2E2E2 100%);
+    }
+
+    .sub-header__stat-list {
+        padding-bottom: 30px;
+    }
+
+
+    .sub-header__list-wrap {
+        width: 25%;
+        margin: 50px 0;
+    }
+
+    .practice__list-wrap {
+
+        width: 25%;
+    }
+
+    .practice__list-item {
+        height: 100%;
+    }
+
+}
+
+
+
+
+
+
+
