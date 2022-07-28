@@ -194,19 +194,22 @@ MF
 
 }
 
-.practice__list-item > h2 {
+.practice__list-content {
     padding-top: 30px;
     padding-left: 30px;
+    padding-right: 30px;
+}
+.practice__list-content > p {
+    padding-top: 15px;
+}
+
+.practice__list-content > h2 {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.1px;
     color: #252B42;
-}
-
-.practice__list-item > p {
-    padding-left: 30px;
 }
 
 .practice__list-item > img {
